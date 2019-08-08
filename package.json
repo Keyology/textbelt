@@ -23,7 +23,8 @@
   },
   "version": "0.0.3",
   "scripts": {
-    "start": "node server/app.js",
+    "preinstall": "npm install pm2 -g",
+    "start": "pm2-runtime server/app.js -i max",
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   }
